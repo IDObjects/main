@@ -1,0 +1,62 @@
+2025-04-20 22:55:37,449 - INFO - Starting Hedera transaction lookup for: 0.0.1234@1234567890.123456789
+2025-04-20 22:55:37,449 - DEBUG - Operator ID: 0.0.1234
+2025-04-20 22:55:37,449 - DEBUG - Network: testnet
+2025-04-20 22:55:37,449 - INFO - Setting up Hedera client for testnet
+2025-04-20 22:55:37,450 - DEBUG - Operator account ID: <com.hedera.hashgraph.sdk.AccountId at 0x10a4ddc20 jclass=com/hedera/hashgraph/sdk/AccountId jself=<LocalRef obj=0x11c62e442 at 0x10127dbd0>>
+2025-04-20 22:55:37,450 - ERROR - Invalid operator private key: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+2025-04-20 22:55:37,450 - ERROR - Error in main execution: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 135, in <module>
+    client = setup_client(operator_id, operator_key, network)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 48, in setup_client
+    private_key = PrivateKey.fromString(operator_key)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "jnius/jnius_export_class.pxi", line 876, in jnius.JavaMethod.__call__
+  File "jnius/jnius_export_class.pxi", line 1042, in jnius.JavaMethod.call_staticmethod
+  File "jnius/jnius_utils.pxi", line 79, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+2025-04-20 22:55:47,060 - INFO - Starting Hedera transaction lookup for: 0.0.1234@1234567890.123456789
+2025-04-20 22:55:47,060 - DEBUG - Operator ID: 0.0.1234
+2025-04-20 22:55:47,060 - DEBUG - Network: testnet
+2025-04-20 22:55:47,060 - INFO - Setting up Hedera client for testnet
+2025-04-20 22:55:47,061 - DEBUG - Operator account ID: <com.hedera.hashgraph.sdk.AccountId at 0x1042bc5a0 jclass=com/hedera/hashgraph/sdk/AccountId jself=<LocalRef obj=0x10430fd02 at 0x1030a5bd0>>
+2025-04-20 22:55:47,061 - ERROR - Invalid operator private key: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+2025-04-20 22:55:47,061 - ERROR - Error in main execution: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 135, in <module>
+    client = setup_client(operator_id, operator_key, network)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 48, in setup_client
+    private_key = PrivateKey.fromString(operator_key)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "jnius/jnius_export_class.pxi", line 876, in jnius.JavaMethod.__call__
+  File "jnius/jnius_export_class.pxi", line 1042, in jnius.JavaMethod.call_staticmethod
+  File "jnius/jnius_utils.pxi", line 79, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+2025-04-20 22:57:51,245 - INFO - Starting Hedera transaction lookup for: 0.0.1234@1234567890.123456789
+2025-04-20 22:57:51,245 - DEBUG - Operator ID: 0.0.1234
+2025-04-20 22:57:51,245 - DEBUG - Network: testnet
+2025-04-20 22:57:51,245 - INFO - Setting up Hedera client for testnet
+2025-04-20 22:57:51,245 - DEBUG - Operator account ID: <com.hedera.hashgraph.sdk.AccountId at 0x1023cdae0 jclass=com/hedera/hashgraph/sdk/AccountId jself=<LocalRef obj=0x12dfeb902 at 0x100dbde90>>
+2025-04-20 22:57:51,246 - ERROR - Error setting up client: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 46, in setup_client
+    private_key = PrivateKey.fromString(operator_key)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "jnius/jnius_export_class.pxi", line 876, in jnius.JavaMethod.__call__
+  File "jnius/jnius_export_class.pxi", line 1042, in jnius.JavaMethod.call_staticmethod
+  File "jnius/jnius_utils.pxi", line 79, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+2025-04-20 22:57:51,246 - ERROR - Error in main execution: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 146, in <module>
+    client = setup_client(operator_id, operator_key, network)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/hedera_lookup.py", line 46, in setup_client
+    private_key = PrivateKey.fromString(operator_key)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "jnius/jnius_export_class.pxi", line 876, in jnius.JavaMethod.__call__
+  File "jnius/jnius_export_class.pxi", line 1042, in jnius.JavaMethod.call_staticmethod
+  File "jnius/jnius_utils.pxi", line 79, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: exception decoding Hex string: invalid characters encountered in Hex string org.bouncycastle.util.encoders.DecoderException

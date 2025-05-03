@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" 
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI" 
+                  id="Definitions_1" 
+                  targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_1" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1" sourceRef="StartEvent_1" targetRef="Task_ValidateInput"/>
+    
+    <bpmn:serviceTask id="Task_ValidateInput" name="Validate Input">
+      <bpmn:incoming>SequenceFlow_1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_2" sourceRef="Task_ValidateInput" targetRef="Task_CalculateAge"/>
+    
+    <bpmn:serviceTask id="Task_CalculateAge" name="Calculate Age">
+      <bpmn:incoming>SequenceFlow_2</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_3" sourceRef="Task_CalculateAge" targetRef="Gateway_CheckAge"/>
+    
+    <bpmn:exclusiveGateway id="Gateway_CheckAge" name="Is Age Over 21?">
+      <bpmn:incoming>SequenceFlow_3</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_4</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="SequenceFlow_4" sourceRef="Gateway_CheckAge" targetRef="Task_CreateClaim">
+      <bpmn:conditionExpression xsi:type="tFormalExpression">${age >= 21}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="SequenceFlow_5" sourceRef="Gateway_CheckAge" targetRef="Task_CreateClaim">
+      <bpmn:conditionExpression xsi:type="tFormalExpression">${age < 21}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:serviceTask id="Task_CreateClaim" name="Create Age Claim">
+      <bpmn:incoming>SequenceFlow_4</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_5</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_6</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_6" sourceRef="Task_CreateClaim" targetRef="EndEvent_1"/>
+    
+    <bpmn:endEvent id="EndEvent_1">
+      <bpmn:incoming>SequenceFlow_6</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+</bpmn:definitions>

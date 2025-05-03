@@ -1,0 +1,280 @@
+2025-04-20 14:28:04,861 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-20 14:28:04,861 - DEBUG - Owner DID: did:example:123
+2025-04-20 14:28:04,861 - DEBUG - Public key path: public_key.pem
+2025-04-20 14:28:04,861 - DEBUG - Output directory: None
+2025-04-20 14:28:04,861 - DEBUG - Public key loaded successfully
+2025-04-20 14:28:04,861 - INFO - Creating data object for PDF: No.pdf
+2025-04-20 14:28:04,861 - DEBUG - Reading PDF file
+2025-04-20 14:28:04,861 - DEBUG - Calculating PDF hash
+2025-04-20 14:28:04,861 - DEBUG - Creating data object content
+2025-04-20 14:28:04,862 - DEBUG - Setting up validity conditions
+2025-04-20 14:28:04,862 - INFO - Creating data object
+2025-04-20 14:28:04,871 - ERROR - Error creating data object: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 79, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-20 14:28:04,871 - ERROR - Error in main execution: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 227, in <module>
+    result = create_pdf_data_object(pdf_path, owner_did, public_key, output_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 79, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 19:08:31,088 - ERROR - Insufficient arguments provided
+2025-04-26 19:09:30,602 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 19:09:30,602 - DEBUG - Owner DID: did:key:zBLwz8tcA4Az7jbm9xpzs5QamLHn4HDwEHA5x1RFXskKF
+2025-04-26 19:09:30,602 - DEBUG - Public key path: zBLwz8tcA4Az7jbm9xpzs5QamLHn4HDwEHA5x1RFXskKF
+2025-04-26 19:09:30,602 - DEBUG - Output directory: None
+2025-04-26 19:09:30,602 - ERROR - Error reading public key: [Errno 2] No such file or directory: 'zBLwz8tcA4Az7jbm9xpzs5QamLHn4HDwEHA5x1RFXskKF'
+2025-04-26 19:09:57,869 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 19:09:57,870 - DEBUG - Owner DID: did:key:zBLwz8tcA4Az7jbm9xpzs5QamLHn4HDwEHA5x1RFXskKF
+2025-04-26 19:09:57,870 - DEBUG - Public key path: public_key.pem
+2025-04-26 19:09:57,870 - DEBUG - Output directory: None
+2025-04-26 19:09:57,870 - DEBUG - Public key loaded successfully
+2025-04-26 19:09:57,870 - INFO - Creating data object for PDF: No.pdf
+2025-04-26 19:09:57,870 - DEBUG - Reading PDF file
+2025-04-26 19:09:57,870 - DEBUG - Calculating PDF hash
+2025-04-26 19:09:57,870 - DEBUG - Creating data object content
+2025-04-26 19:09:57,871 - DEBUG - Setting up validity conditions
+2025-04-26 19:09:57,871 - INFO - Creating data object
+2025-04-26 19:09:57,887 - ERROR - Error creating data object: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 79, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 19:09:57,888 - ERROR - Error in main execution: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 227, in <module>
+    result = create_pdf_data_object(pdf_path, owner_did, public_key, output_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 79, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 19:10:52,792 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 19:10:52,792 - DEBUG - Owner DID: did:key:zBLwz8tcA4Az7jbm9xpzs5QamLHn4HDwEHA5x1RFXskKF
+2025-04-26 19:10:52,792 - DEBUG - Public key path: public_key.pem
+2025-04-26 19:10:52,792 - DEBUG - Output directory: None
+2025-04-26 19:10:52,792 - DEBUG - Public key loaded successfully
+2025-04-26 19:10:52,792 - INFO - Creating data object for PDF: No.pdf
+2025-04-26 19:10:52,792 - DEBUG - Reading PDF file
+2025-04-26 19:10:52,792 - DEBUG - Calculating PDF hash
+2025-04-26 19:10:52,792 - DEBUG - Creating data object content
+2025-04-26 19:10:52,792 - DEBUG - Setting up validity conditions
+2025-04-26 19:10:52,792 - INFO - Creating data object
+2025-04-26 19:10:52,796 - ERROR - Error creating data object: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 80, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 19:10:52,796 - ERROR - Error in main execution: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 227, in <module>
+    result = create_pdf_data_object(pdf_path, owner_did, public_key, output_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 80, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 19:15:02,271 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 19:15:02,271 - DEBUG - Owner DID: did:key:zBLwz8tcA4Az7jbm9xpzs5QamLHn4HDwEHA5x1RFXskKF
+2025-04-26 19:15:02,271 - DEBUG - Public key path: public_key.pem
+2025-04-26 19:15:02,271 - DEBUG - Output directory: None
+2025-04-26 19:15:02,271 - DEBUG - Public key loaded successfully
+2025-04-26 19:15:02,271 - INFO - Creating data object for PDF: No.pdf
+2025-04-26 19:15:02,271 - DEBUG - Reading PDF file
+2025-04-26 19:15:02,272 - DEBUG - Calculating PDF hash
+2025-04-26 19:15:02,272 - DEBUG - Creating data object content
+2025-04-26 19:15:02,272 - DEBUG - Setting up validity conditions
+2025-04-26 19:15:02,272 - INFO - Creating data object
+2025-04-26 19:15:02,276 - ERROR - Error creating data object: Only byte strings of equal length can be xored
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 80, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 129, in encrypt
+    maskedDB = strxor(db, dbMask)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Util/strxor.py", line 70, in strxor
+    raise ValueError("Only byte strings of equal length can be xored")
+ValueError: Only byte strings of equal length can be xored
+2025-04-26 19:15:02,277 - ERROR - Error in main execution: Only byte strings of equal length can be xored
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 227, in <module>
+    result = create_pdf_data_object(pdf_path, owner_did, public_key, output_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 80, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 129, in encrypt
+    maskedDB = strxor(db, dbMask)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Util/strxor.py", line 70, in strxor
+    raise ValueError("Only byte strings of equal length can be xored")
+ValueError: Only byte strings of equal length can be xored
+2025-04-26 20:42:29,280 - ERROR - Insufficient arguments provided
+2025-04-26 20:42:44,415 - ERROR - Insufficient arguments provided
+2025-04-26 20:43:34,165 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 20:43:34,165 - DEBUG - Owner DID: zCgLiFUd5Ju488tASR1aSpyTQVVNGWNGg4xVxBJzDEqCH
+2025-04-26 20:43:34,165 - DEBUG - Public key path: public_key.pem
+2025-04-26 20:43:34,165 - DEBUG - Output directory: None
+2025-04-26 20:43:34,165 - DEBUG - Public key loaded successfully
+2025-04-26 20:43:34,165 - INFO - Creating data object for PDF: No.pdf
+2025-04-26 20:43:34,165 - DEBUG - Reading PDF file
+2025-04-26 20:43:34,165 - DEBUG - Calculating PDF hash
+2025-04-26 20:43:34,165 - DEBUG - Creating data object content
+2025-04-26 20:43:34,166 - DEBUG - Setting up validity conditions
+2025-04-26 20:43:34,166 - INFO - Creating data object
+2025-04-26 20:43:34,172 - ERROR - Error creating data object: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 80, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 20:43:34,172 - ERROR - Error in main execution: Plaintext is too long.
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 227, in <module>
+    result = create_pdf_data_object(pdf_path, owner_did, public_key, output_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 80, in create
+    encrypted_content = cipher.encrypt(content_json)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/Cipher/PKCS1_OAEP.py", line 117, in encrypt
+    raise ValueError("Plaintext is too long.")
+ValueError: Plaintext is too long.
+2025-04-26 20:44:26,659 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 20:44:26,659 - DEBUG - Owner DID: zCgLiFUd5Ju488tASR1aSpyTQVVNGWNGg4xVxBJzDEqCH
+2025-04-26 20:44:26,659 - DEBUG - Public key path: public_key.pem
+2025-04-26 20:44:26,659 - DEBUG - Output directory: None
+2025-04-26 20:44:26,659 - DEBUG - Public key loaded successfully
+2025-04-26 20:44:26,659 - INFO - Creating data object for PDF: No.pdf
+2025-04-26 20:44:26,659 - DEBUG - Reading PDF file
+2025-04-26 20:44:26,659 - DEBUG - Calculating PDF hash
+2025-04-26 20:44:26,659 - DEBUG - Creating data object content
+2025-04-26 20:44:26,659 - DEBUG - Setting up validity conditions
+2025-04-26 20:44:26,659 - INFO - Creating data object
+2025-04-26 20:44:26,692 - DEBUG - Creating PDF copy with metadata
+2025-04-26 20:44:26,693 - INFO - Saving output PDF to: data_object_5cee813e_No.pdf
+2025-04-26 20:44:26,694 - INFO - Data object creation completed successfully
+2025-04-26 20:44:47,025 - INFO - Starting PDF data object creation for: No.pdf
+2025-04-26 20:44:47,025 - DEBUG - Owner DID: zCgLiFUd5Ju488tASR1aSpyTQVVNGWNGg4xVxBJzDEqCH
+2025-04-26 20:44:47,025 - DEBUG - Public key path: public_key.pem
+2025-04-26 20:44:47,025 - DEBUG - Output directory: out
+2025-04-26 20:44:47,025 - DEBUG - Public key loaded successfully
+2025-04-26 20:44:47,025 - INFO - Creating data object for PDF: No.pdf
+2025-04-26 20:44:47,025 - DEBUG - Reading PDF file
+2025-04-26 20:44:47,026 - DEBUG - Calculating PDF hash
+2025-04-26 20:44:47,026 - DEBUG - Creating data object content
+2025-04-26 20:44:47,026 - DEBUG - Setting up validity conditions
+2025-04-26 20:44:47,026 - INFO - Creating data object
+2025-04-26 20:44:47,047 - DEBUG - Creating PDF copy with metadata
+2025-04-26 20:44:47,048 - INFO - Saving output PDF to: out/data_object_5cee813e_No.pdf
+2025-04-26 20:44:47,049 - INFO - Data object creation completed successfully
+2025-04-26 20:49:04,598 - INFO - Creating data object for PDF: temp_20250426_204904.pdf
+2025-04-26 20:49:04,598 - DEBUG - Reading PDF file
+2025-04-26 20:49:04,599 - DEBUG - Calculating PDF hash
+2025-04-26 20:49:04,600 - DEBUG - Creating data object content
+2025-04-26 20:49:04,602 - DEBUG - Setting up validity conditions
+2025-04-26 20:49:04,603 - INFO - Creating data object
+2025-04-26 20:49:04,643 - ERROR - Error creating data object: RSA key format is not supported
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 76, in create_pdf_data_object
+    data_obj = DataObject.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/apps/idio_did/data_object.py", line 96, in create
+    public_key = RSA.import_key(owner_public_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/miniconda3/lib/python3.12/site-packages/Crypto/PublicKey/RSA.py", line 829, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+2025-04-26 20:51:46,451 - INFO - Creating data object for PDF: temp_20250426_205146.pdf
+2025-04-26 20:51:46,453 - DEBUG - Reading PDF file
+2025-04-26 20:51:46,459 - DEBUG - Calculating PDF hash
+2025-04-26 20:51:46,462 - DEBUG - Creating data object content
+2025-04-26 20:51:46,474 - DEBUG - Setting up validity conditions
+2025-04-26 20:51:46,474 - INFO - Creating data object
+2025-04-26 20:51:46,514 - DEBUG - Creating PDF copy with metadata
+2025-04-26 20:51:46,623 - INFO - Saving output PDF to: output/data_object_af7eec66_temp_20250426_205146.pdf
+2025-04-26 20:51:46,645 - INFO - Data object creation completed successfully
+2025-04-26 20:55:34,173 - INFO - Reading PDF: temp_20250426_205534_metadata.pdf
+2025-04-26 20:56:52,679 - INFO - Reading PDF: temp_20250426_205652_metadata.pdf
+2025-04-26 21:01:48,520 - INFO - Starting PDF data object creation for: OpenAI_Prompting_Guide_GPT_4_1_1744915253.pdf
+2025-04-26 21:01:48,520 - DEBUG - Owner DID: zCgLiFUd5Ju488tASR1aSpyTQVVNGWNGg4xVxBJzDEqCH
+2025-04-26 21:01:48,520 - DEBUG - Public key path: public_key.pem
+2025-04-26 21:01:48,520 - DEBUG - Output directory: out
+2025-04-26 21:01:48,521 - DEBUG - Public key loaded successfully
+2025-04-26 21:01:48,521 - INFO - Creating data object for PDF: OpenAI_Prompting_Guide_GPT_4_1_1744915253.pdf
+2025-04-26 21:01:48,521 - DEBUG - Reading PDF file
+2025-04-26 21:01:48,521 - DEBUG - Calculating PDF hash
+2025-04-26 21:01:48,521 - DEBUG - Creating data object content
+2025-04-26 21:01:48,522 - DEBUG - Setting up validity conditions
+2025-04-26 21:01:48,522 - INFO - Creating data object
+2025-04-26 21:01:48,556 - DEBUG - Creating PDF copy with metadata
+2025-04-26 21:01:48,563 - INFO - Saving output PDF to: out/data_object_40124bfb_OpenAI_Prompting_Guide_GPT_4_1_1744915253.pdf
+2025-04-26 21:01:48,567 - INFO - Data object creation completed successfully
+2025-04-26 21:02:17,653 - INFO - Reading PDF: temp_20250426_210217_metadata.pdf
+2025-04-26 21:27:10,772 - INFO - Reading PDF: temp_20250426_212710_metadata.pdf
+2025-04-26 21:28:03,284 - INFO - Creating data object for PDF: temp_20250426_212803.pdf
+2025-04-26 21:28:03,284 - ERROR - Error creating data object: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 40, in create_pdf_data_object
+    owner_did = did_document.get("id")
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-04-26 21:28:09,411 - INFO - Creating data object for PDF: temp_20250426_212809.pdf
+2025-04-26 21:28:09,411 - ERROR - Error creating data object: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/Users/ian/apps/idio_did/pdf_data_object.py", line 40, in create_pdf_data_object
+    owner_did = did_document.get("id")
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'

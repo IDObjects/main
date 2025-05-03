@@ -1,0 +1,13 @@
+private_key.pem
+public_key.pem
+private_key1
+*.pem
+out/*
+output/*
+*.pdf
+*.docx
+*.txt
+*.pyc
+*.pyo
+*.pyd
+*.pyo
