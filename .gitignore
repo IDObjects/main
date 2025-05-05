@@ -11,3 +11,5 @@ output/*
 *.pyo
 *.pyd
 *.pyo
+.vscode
+*.log
