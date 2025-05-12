@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Over 21 Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .over21 {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .under21 {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Over 21 Checker</h1>
+        <p>Enter your date of birth:</p>
+        <input type="date" id="dob" required>
+        <button onclick="checkAge()">Check Age</button>
+        
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@open-policy-agent/opa-wasm@latest/dist/opa-wasm-browser.min.js"></script>
+    <script>
+        let policyWasm = null;
+
+        // Load the WASM policy
+        async function loadPolicy() {
+            try {
+                const response = await fetch('policy.wasm');
+                const wasm = await response.arrayBuffer();
+                policyWasm = await OPA.loadPolicy(wasm);
+                console.log('Policy loaded successfully');
+            } catch (err) {
+                console.error('Failed to load policy:', err);
+                alert('Failed to load policy. Please check the console for details.');
+            }
+        }
+
+        // Check if user is over 21
+        async function checkAge() {
+            if (!policyWasm) {
+                alert('Policy not loaded yet. Please wait...');
+                return;
+            }
+
+            const dobInput = document.getElementById('dob');
+            const resultDiv = document.getElementById('result');
+            
+            if (!dobInput.value) {
+                alert('Please enter a date of birth');
+                return;
+            }
+
+            try {
+                const input = {
+                    user: {
+                        dob: dobInput.value
+                    },
+                    current_date: new Date().toISOString().split('T')[0]  // Format as YYYY-MM-DD
+                };
+
+                // Evaluate the policy
+                const result = policyWasm.evaluate(input);
+                const isOver21 = result && result[0] && result[0].result;
+
+                // Display result
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result ' + (isOver21 ? 'over21' : 'under21');
+                resultDiv.textContent = isOver21 
+                    ? 'You are 21 or older.' 
+                    : 'You are under 21.';
+
+            } catch (err) {
+                console.error('Error evaluating policy:', err);
+                alert('An error occurred while checking age. Please check the console for details.');
+            }
+        }
+
+        // Load policy when page loads
+        document.addEventListener('DOMContentLoaded', loadPolicy);
+    </script>
+</body>
+</html>
