@@ -4,14 +4,23 @@
   <title>DID Viewer</title>
   <style>
     body {
-      width: 300px;
+      width: 400px;
       padding: 16px;
       font-family: Arial, sans-serif;
+      font-size: 14px;
     }
     .container {
       display: flex;
       flex-direction: column;
       gap: 12px;
+    }
+    .section {
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 12px;
+    }
+    .section:last-child {
+      border-bottom: none;
     }
     .did-input {
       width: 100%;
@@ -26,29 +35,88 @@
       padding: 8px 16px;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 14px;
     }
     button:hover {
       background-color: #3367d6;
     }
-    #didDisplay {
+    button.secondary {
+      background-color: #f1f3f4;
+      color: #3c4043;
+    }
+    button.secondary:hover {
+      background-color: #e8eaed;
+    }
+    #didDisplay, #dataObjectsInfo {
       margin-top: 12px;
-      padding: 8px;
-      background-color: #f5f5f5;
+      padding: 12px;
+      background-color: #f8f9fa;
       border-radius: 4px;
       word-break: break-all;
       font-family: monospace;
       display: none;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 12px;
+    }
+    .data-object {
+      margin-bottom: 10px;
+      padding: 8px;
+      background: white;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+    }
+    .data-object-id {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .data-object-content {
+      max-height: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .found-did {
+      color: #1a73e8;
+      font-weight: bold;
+      background-color: #e8f0fe;
+      padding: 0 4px;
+      border-radius: 2px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>DID Viewer</h2>
-    <input type="text" id="didInput" class="did-input" placeholder="Enter DID or select from storage">
-    <button id="loadDid">Load DID</button>
-    <button id="saveDid">Save Current DID</button>
-    <div id="didDisplay"></div>
+    
+    <div class="section">
+      <h3>DID Management</h3>
+      <input type="text" id="didInput" class="did-input" placeholder="Enter DID or select from storage">
+      <div style="display: flex; gap: 8px;">
+        <button id="loadDid">Load DID</button>
+        <button id="saveDid" class="secondary">Save DID</button>
+      </div>
+      <div id="didDisplay"></div>
+    </div>
+    
+    <div class="section">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3>DataObjects Found</h3>
+        <div>
+          <button id="scanPage" class="secondary" style="padding: 4px 8px; font-size: 12px;">
+            Scan Page
+          </button>
+          <button id="clearDataObjects" class="secondary" style="padding: 4px 8px; font-size: 12px;">
+            Clear
+          </button>
+        </div>
+      </div>
+      <div id="dataObjectsInfo">
+        <div>Scanning for &lt;DataObject&gt; elements...</div>
+      </div>
+    </div>
   </div>
+  
   <script src="popup.js"></script>
 </body>
 </html>
