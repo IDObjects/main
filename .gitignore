@@ -13,3 +13,4 @@ output/*
 *.pyo
 .vscode
 *.log
+.vscode
